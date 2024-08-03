@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hw8-mongodb"
+version = "0.1.0"
+description = ""
+authors = ["Aleksandr <aleksandr.voitushenko@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pymongo = {extras = ["srv"], version = "^4.8.0"}
+mongoengine = "^0.28.2"
+python-dotenv = "^1.0.1"
+certifi = "^2024.7.4"
+redis = "^5.0.8"
+redis-lru = "^0.1.2"
+
+
+[tool.poetry.group.dev.dependencies]
+poetry-plugin-export = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
