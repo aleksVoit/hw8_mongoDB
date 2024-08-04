@@ -17,3 +17,9 @@ class Quote(Document):
     author = ReferenceField(Author)
     quote = StringField()
 
+
+class Contact(Document):
+    fullname = StringField()
+    email = StringField()
+    phone_number = StringField()
+    send_email = BooleanField(default=False)
