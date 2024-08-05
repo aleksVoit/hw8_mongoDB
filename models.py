@@ -22,4 +22,5 @@ class Contact(Document):
     fullname = StringField()
     email = StringField()
     phone_number = StringField()
-    send_email = BooleanField(default=False)
+    send_msg = BooleanField(default=False)
+    preference = StringField()
