@@ -1,6 +1,6 @@
 import pika
 import json
-from services import send_email
+from services import send_email, send_sms
 from models import Contact
 import connect
 
@@ -33,7 +33,7 @@ def sms_callback(ch, method, properties, body):
     phone = contact.phone_number
     name = contact.fullname
     try:
-        send_email(phone, message)
+        send_sms(phone, message)
         contact.send_msg = True
         contact.save()
         print(f'Message - {message} was sent to {name} on {phone}')
